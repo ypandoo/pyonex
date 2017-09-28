@@ -2,7 +2,11 @@ var win = $(window).width();var sc,srv,hig;
 var speed = 1100;
 var mdtop,ftop;
 //body[0].innerHTML = '<style>#top_slider.anime1{opacity:0;};</style>'+body[0].innerHTML;
-$(function(){"use strict";var pageTitle=document.title;var docUrl=document.URL;$('#social').html('<ul class="social"><li><div class="fb-like" data-href="'+docUrl+'" data-layout="button_count" data-action="recommend" data-size="small" data-show-faces="true" data-share="true"></div></li></ul><div class="clear"></div>');$('body').prepend('<div id="fb-root"></div><script>(function(d, s, id){var js,fjs=d.getElementsByTagName(s)[0];if (d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";fjs.parentNode.insertBefore(js,fjs);}(document,\'script\',\'facebook-jssdk\'));window.___gcfg = {lang: "ja"}; (function() { var po = document.createElement("script"); po.type = "text/javascript";po.async = true; po.src = "https://apis.google.com/js/plusone.js"; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(po, s);  })();</script>');
+$(function () {
+	"use strict"; 
+	var pageTitle = document.title; 
+	var docUrl = document.URL; 
+	// $('#social').html('<ul class="social"><li><div class="fb-like" data-href="' + docUrl + '" data-layout="button_count" data-action="recommend" data-size="small" data-show-faces="true" data-share="true"></div></li></ul><div class="clear"></div>'); $('body').prepend('<div id="fb-root"></div><script>(function(d, s, id){var js,fjs=d.getElementsByTagName(s)[0];if (d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";fjs.parentNode.insertBefore(js,fjs);}(document,\'script\',\'facebook-jssdk\'));window.___gcfg = {lang: "ja"}; (function() { var po = document.createElement("script"); po.type = "text/javascript";po.async = true; po.src = "https://apis.google.com/js/plusone.js"; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(po, s);  })();</script>');
 
 	if(win>900){
 		$("a.fancyimg").fancybox();
