@@ -118,7 +118,7 @@ function re_size(){"use strict";
 	
 	//smart nav
 	if(win<=1000 && !$('#menu').length){
-		$('#nav').prepend('<div id="menu">Menu</div>');
+		$('#nav').prepend('<div id="menu">菜单</div>');
 		$('#nav ul').slideUp();
 	}else if(win>1000){
 		$('#menu').remove();
