@@ -16,8 +16,8 @@ app.locals.ENV_DEVELOPMENT = env == 'development';
 
 // view engine setup
 
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 // app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger('dev'));
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
@@ -62,6 +62,13 @@ app.use(function(err, req, res, next) {
         error: {},
         title: 'error'
     });
+});
+
+var server = app.listen(3000, function () {
+var host = server.address().address;
+var port = server.address().port;
+
+console.log('Example app listening at http://%s:%s', host, port);
 });
 
 

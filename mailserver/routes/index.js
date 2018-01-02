@@ -23,7 +23,7 @@ var config = {
 
 //收件箱配置
 var options = {
-	subject: "测试邮件",
+	subject: "Pyonex客户咨询邮件",
 	text: "我是邮件内容",
 	to: "ypandoo@126.com",
 	// cc:"870***29@qq.com,51****78@qq.com",
@@ -39,6 +39,8 @@ var options = {
 };
 
 email_tools.sendEmail(config, options);
+
+res.send(200);
 });
 
 

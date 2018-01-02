@@ -26,4 +26,11 @@ var options = {
 	// html:{path:"tpl/index.html"}
 };
 
+var mailOptions = {
+	from: 'vnewcd@126.com',
+	to: 'ypandoo@126.com',
+	subject: '测试邮件',
+	text: '测试邮件内容，请不要回复'
+  };
+
 email_tools.sendEmail(config, options);
