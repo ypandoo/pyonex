@@ -7,8 +7,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
+var cors = require('cors');
 
 var app = express();
+app.use(cors());
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -41,6 +43,8 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
+//allow custom header and CORS
+
 
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {

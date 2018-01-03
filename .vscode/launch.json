@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/mailserver/bin/www"
+            "program": "${workspaceRoot}/mailserver/app.js"
         }
     ]
 }

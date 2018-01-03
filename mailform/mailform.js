@@ -126,7 +126,67 @@
 				// 		obj.elements[i].disabled = true;
 				// 	}
 				// }
-				alert('提交成功！稍后我们会联系您！');
+
+				var customer_name = $('#customer_name').val();
+				var customer_email = $('#customer_email').val();
+				var customer_company = $('#customer_company').val();
+				var customer_department = $('#customer_department').val();
+				var customer_street = $('#customer_street').val();
+				var customer_city = $('#customer_city').val();
+				var customer_code = $('#customer_code').val();
+				var customer_country = $('#customer_country').val();
+				var customer_tel = $('#customer_tel').val();
+				var customer_question = $('#customer_question').val();
+
+				$.ajax({
+					//提交数据的类型 POST GET
+					type: "POST",
+					//提交的网址
+					url: "http://127.0.0.1:3000/sendmail",
+					headers:{
+						'Access-Control-Allow-Origin': '*',
+						'Access-Control-Allow-Headers': 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With',
+						'Access-Control-Allow-Methods': 'PUT, POST, GET, DELETE, OPTIONS'
+					},
+					//提交的数据
+					data: {
+						name : customer_name,
+						email : customer_email,
+						company : customer_company,
+						department : customer_department,
+						street : customer_street,
+						city : customer_city,
+						code : customer_code,
+						country : customer_country,
+						tel : customer_tel,
+						question : customer_question,
+					},
+					//返回数据的格式
+					datatype: "json", //"xml", "html", "script", "json", "jsonp", "text".
+					//在请求之前调用的函数
+					beforeSend: function (request) {
+						request.setRequestHeader("Authorization", "Negotiate");
+					},
+					//成功返回之后调用的函数             
+					success: function (data) {
+						alert('提交成功！稍后我们会联系您！');
+					},
+					//调用执行后调用的函数
+					complete: function (XMLHttpRequest, textStatus) {
+						console.log(XMLHttpRequest.responseText);
+						console.log(textStatus);
+						//HideLoading();
+					},
+					//调用出错执行的函数
+					error: function (XMLHttpRequest, textStatus, errorThrown) {
+						// alert(XMLHttpRequest.status);
+						// alert(XMLHttpRequest.readyState);
+						// alert(textStatus);  
+						//请求出错处理
+						alert('提交失败！服务暂时不可用');
+					}
+				});
+				
 				return false;
 			}
 			else{

@@ -26,7 +26,6 @@
   <script src="js/scriptset.js"></script>
 
   <script>
-
   </script>
 </head>
 
@@ -36,21 +35,41 @@
       <div id="header">
         <div id="header_top">
           <div class="wrapper">
-            <div id="seirin_logo"><a href="http://www.global.seirin.jp/english/"><img src="img/logo.png" alt="SEIRIN"></a></div>
+            <div id="seirin_logo">
+              <a href="http://www.global.seirin.jp/english/">
+                <img src="img/logo.png" alt="SEIRIN">
+              </a>
+            </div>
           </div>
         </div>
         <div id="header_main">
           <div class="wrapper">
-            <div id="pyonex_logo"><a href="index.html"><img src="img/pyonex_logo.png" alt="PYONEX"></a></div>
+            <div id="pyonex_logo">
+              <a href="index.html">
+                <img src="img/pyonex_logo.png" alt="PYONEX">
+              </a>
+            </div>
             <nav>
               <div id="nav">
                 <ul>
-                  <li><a href="products.html">产品</a></li>
-                  <li><a href="design.html">设计</a></li>
-                  <li><a href="clinical-application/index.html">临床应用</a></li>
-                  <li><a href="testimonial.html">相关证明</a></li>
-                  <li><a href="medicalresearch.html">医学研究</a></li>
-                  <li><a href="contact.html">联系我们</a></li>
+                  <li>
+                    <a href="products.html">产品</a>
+                  </li>
+                  <li>
+                    <a href="design.html">设计</a>
+                  </li>
+                  <li>
+                    <a href="clinical-application/index.html">临床应用</a>
+                  </li>
+                  <li>
+                    <a href="testimonial.html">相关证明</a>
+                  </li>
+                  <li>
+                    <a href="medicalresearch.html">医学研究</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">联系我们</a>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -72,51 +91,63 @@
           </div>
         </section>
         <div id="pankuzu" class="wrapper">
-          <p><span class="home"><a href="index.html">主页</a></span> &gt; <span class="nowpage">联系我们</span></p>
+          <p>
+            <span class="home">
+              <a href="index.html">主页</a>
+            </span> &gt;
+            <span class="nowpage">联系我们</span>
+          </p>
         </div>
         <div class="wrapper">
           <div class="wide_one content_post">
             <form id="contact_form1" class="" onsubmit="sendmail(this);">
-              <p class="radio_fade_left anime1 fade_soon" id="about01">■ <span class="req">*</span> 为必填选项.</p>
+              <p class="radio_fade_left anime1 fade_soon" id="about01">■
+                <span class="req">*</span> 为必填选项.</p>
               <div class="fade_left anime1 fade_soon con_set">
                 <dl>
-                  <dt>姓名 <span class="req">*</span></dt>
+                  <dt>姓名
+                    <span class="req">*</span>
+                  </dt>
                   <dd>
-                    <input type="text" name="Name(required)" class="enter_email_input">
+                    <input type="text" id="customer_name" name="Name(required)" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
               <div class="fade_right anime1 fade_soon con_set">
                 <dl>
-                  <dt>E-Mail <span class="req">*</span></dt>
+                  <dt>E-Mail
+                    <span class="req">*</span>
+                  </dt>
                   <dd>
-                    <input type="email" name="Email(required)" class="enter_email_input">
+                    <input type="email" name="Email(required)" id="customer_email" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
               <div class="clear"></div>
               <div class="radio_box fade_left anime1 fade_soon">
                 <dl>
-                  <dt>职业 <span class="req">*</span></dt>
+                  <dt>职业
+                    <span class="req">*</span>
+                  </dt>
                   <dd id="radio_pro">
                     <label>
-<input type="radio" name="Prefession(required)" class="enter_radio_input" value="Medical Doctor">
-医生</label>
+                      <input type="radio" name="Prefession(required)" class="enter_radio_input" value="Medical Doctor"> 医生
+                    </label>
                     <label>
-<input type="radio" name="Prefession(required)" class="enter_radio_input" value="Licenced Acupuncturist">
-执业针灸师</label>
+                      <input type="radio" name="Prefession(required)" class="enter_radio_input" value="Licenced Acupuncturist"> 执业针灸师
+                    </label>
                     <label>
-<input type="radio" name="Prefession(required)" class="enter_radio_input" value=" Retailer">
-零售商</label>
+                      <input type="radio" name="Prefession(required)" class="enter_radio_input" value=" Retailer"> 零售商
+                    </label>
                     <label>
-<input type="radio" name="Prefession(required)" class="enter_radio_input" value=" Maternity nurse">
-产科护士</label>
+                      <input type="radio" name="Prefession(required)" class="enter_radio_input" value=" Maternity nurse"> 产科护士
+                    </label>
                     <label>
-<input type="radio" name="Prefession(required)" class="enter_radio_input" value=" Other">
-其他</label>
+                      <input type="radio" name="Prefession(required)" class="enter_radio_input" value=" Other"> 其他
+                    </label>
                     <label style="margin-top:4px;">
-<input type="text" name="Find Other" value="" class="enter_input_text_other">
-</label>
+                      <input type="text" name="Find Other" value="" class="enter_input_text_other">
+                    </label>
                   </dd>
                 </dl>
               </div>
@@ -124,7 +155,7 @@
                 <dl>
                   <dt>公司</dt>
                   <dd>
-                    <input type="text" name="Company" class="enter_email_input">
+                    <input type="text" name="Company" id="customer_company" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
@@ -132,7 +163,7 @@
                 <dl>
                   <dt>部门</dt>
                   <dd>
-                    <input type="text" name="Department" class="enter_email_input">
+                    <input type="text" name="Department" id="customer_department" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
@@ -141,7 +172,7 @@
                 <dl>
                   <dt>街道</dt>
                   <dd>
-                    <input type="text" name="Street" class="enter_email_input">
+                    <input type="text" name="Street" id="customer_street" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
@@ -149,7 +180,7 @@
                 <dl>
                   <dt>城市</dt>
                   <dd>
-                    <input type="text" name="City" class="enter_email_input">
+                    <input type="text" name="City" id="customer_city" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
@@ -158,15 +189,17 @@
                 <dl>
                   <dt>邮政编码</dt>
                   <dd>
-                    <input type="text" name="Post code" class="enter_email_input">
+                    <input type="text" name="Post code" id="customer_code" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
               <div class="fade_right anime1 fade_soon con_set">
                 <dl>
-                  <dt>国家 <span class="req">*</span></dt>
+                  <dt>国家
+                    <span class="req">*</span>
+                  </dt>
                   <dd>
-                    <input type="text" name="Country(required)" class="enter_email_input">
+                    <input type="text" name="Country(required)" id="customer_country" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
@@ -175,7 +208,7 @@
                 <dl>
                   <dt>电话</dt>
                   <dd>
-                    <input type="tel" name="Tel" class="enter_email_input">
+                    <input type="tel" name="Tel" id="customer_tel" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
@@ -183,16 +216,18 @@
                 <dl>
                   <dt>传真</dt>
                   <dd>
-                    <input type="tel" name="Fax" class="enter_email_input">
+                    <input type="tel" name="Fax" id="customer_fax" class="enter_email_input">
                   </dd>
                 </dl>
               </div>
               <div class="clear"></div>
               <div class="fade_left anime1 fade_soon nomarb">
                 <dl class="nomarb nopadb">
-                  <dt>您的问题 <span class="req">*</span></dt>
+                  <dt>您的问题
+                    <span class="req">*</span>
+                  </dt>
                   <dd>
-                    <textarea name="Your Qquestion(required)" class="enter_textarea"></textarea>
+                    <textarea name="Your Qquestion(required)" id="customer_question" class="enter_textarea"></textarea>
                   </dd>
                 </dl>
               </div>
@@ -211,65 +246,136 @@
         <div id="footer_main">
           <div class="wrapper">
             <div class="box first">
-              <h3><a href="products.html">产品</a></h3>
+              <h3>
+                <a href="products.html">产品</a>
+              </h3>
               <ul>
-                <li><a href="products.html#pro_lineup">产品线</a></li>
-                <li><a href="products.html#pro_howto">使用方法</a></li>
+                <li>
+                  <a href="products.html#pro_lineup">产品线</a>
+                </li>
+                <li>
+                  <a href="products.html#pro_howto">使用方法</a>
+                </li>
               </ul>
             </div>
             <div class="box second">
-              <h3><a href="design.html">设计</a></h3>
+              <h3>
+                <a href="design.html">设计</a>
+              </h3>
             </div>
             <div class="box third">
-              <h3><a href="clinical-application/index.html">CLINICAL<br>
-APPLICATIOS</a></h3>
+              <h3>
+                <a href="clinical-application/index.html">CLINICAL
+                  <br> APPLICATIOS
+                </a>
+              </h3>
               <ul>
-                <li><a href="clinical-application/tension-headache.html">紧张性头痛</a></li>
-                <li><a href="clinical-application/low-back-pain.html">腰痛</a></li>
-                <li><a href="clinical-application/knee-pain.html">膝盖疼痛</a></li>
-                <li><a href="clinical-application/eyestrain.html">视觉疲劳</a></li>
-                <li><a href="clinical-application/insomnia.html">失眠</a></li>
-                <li><a href="clinical-application/menstrual-pain.html">月经疼痛</a></li>
+                <li>
+                  <a href="clinical-application/tension-headache.html">紧张性头痛</a>
+                </li>
+                <li>
+                  <a href="clinical-application/low-back-pain.html">腰痛</a>
+                </li>
+                <li>
+                  <a href="clinical-application/knee-pain.html">膝盖疼痛</a>
+                </li>
+                <li>
+                  <a href="clinical-application/eyestrain.html">视觉疲劳</a>
+                </li>
+                <li>
+                  <a href="clinical-application/insomnia.html">失眠</a>
+                </li>
+                <li>
+                  <a href="clinical-application/menstrual-pain.html">月经疼痛</a>
+                </li>
               </ul>
             </div>
             <div class="box fourth">
-              <h3><a href="testimonial.html">相关证明</a></h3>
+              <h3>
+                <a href="testimonial.html">相关证明</a>
+              </h3>
               <div class="hidden">
                 <ul>
-                  <li><a href="testimonial/testimonial1.html">Below, Nils von</a></li>
-                  <li><a href="testimonial/testimonial2.html">Birch, Stephen</a></li>
-                  <li><a href="testimonial/testimonial3.html">Brown, Stephen</a></li>
-                  <li><a href="testimonial/testimonial4.html">Callison, Matt</a></li>
-                  <li><a href="testimonial/testimonial5.html">Gabriel Stux</a></li>
-                  <li><a href="testimonial/testimonial6.html">Giancarlo Bazzoni</a></li>
-                  <li><a href="testimonial/testimonial7.html">Gokavi, Cynthia</a></li>
-                  <li><a href="testimonial/testimonial8.html">Howard, John</a></li>
+                  <li>
+                    <a href="testimonial/testimonial1.html">Below, Nils von</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial2.html">Birch, Stephen</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial3.html">Brown, Stephen</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial4.html">Callison, Matt</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial5.html">Gabriel Stux</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial6.html">Giancarlo Bazzoni</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial7.html">Gokavi, Cynthia</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial8.html">Howard, John</a>
+                  </li>
                 </ul>
                 <ul>
-                  <li><a href="testimonial/testimonial9.html">Shudo, Denmei</a></li>
-                  <li><a href="testimonial/testimonial10.html">Kuwahara, T. Koei</a></li>
-                  <li><a href="testimonial/testimonial11.html">Matsumoto, Kiiko</a></li>
-                  <li><a href="testimonial/testimonial12.html">Nakazawa, Hiroshi</a></li>
-                  <li><a href="testimonial/testimonial11.html">Tsurusaki, Takamasa</a></li>
-                  <li><a href="testimonial/testimonial14.html">Römer, Ansgar</a></li>
-                  <li><a href="testimonial/testimonial15.html">Wernicke, Thomas</a></li>
+                  <li>
+                    <a href="testimonial/testimonial9.html">Shudo, Denmei</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial10.html">Kuwahara, T. Koei</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial11.html">Matsumoto, Kiiko</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial12.html">Nakazawa, Hiroshi</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial11.html">Tsurusaki, Takamasa</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial14.html">Römer, Ansgar</a>
+                  </li>
+                  <li>
+                    <a href="testimonial/testimonial15.html">Wernicke, Thomas</a>
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="box fifth">
-              <h3><a href="medicalresearch.html">临床应用
-</a></h3>
+              <h3>
+                <a href="medicalresearch.html">临床应用
+                </a>
+              </h3>
               <ul>
-                <li><a href="medicalresearch.html#medicalr2016">2016</a></li>
-                <li><a href="medicalresearch.html#medicalr2015">2015</a></li>
-                <li><a href="medicalresearch.html#medicalr2014">2014</a></li>
-                <li><a href="medicalresearch.html#medicalr2012">2012</a></li>
-                <li><a href="medicalresearch.html#medicalr2009">2009</a></li>
-                <li><a href="medicalresearch.html#medicalr2008">2008</a></li>
+                <li>
+                  <a href="medicalresearch.html#medicalr2016">2016</a>
+                </li>
+                <li>
+                  <a href="medicalresearch.html#medicalr2015">2015</a>
+                </li>
+                <li>
+                  <a href="medicalresearch.html#medicalr2014">2014</a>
+                </li>
+                <li>
+                  <a href="medicalresearch.html#medicalr2012">2012</a>
+                </li>
+                <li>
+                  <a href="medicalresearch.html#medicalr2009">2009</a>
+                </li>
+                <li>
+                  <a href="medicalresearch.html#medicalr2008">2008</a>
+                </li>
               </ul>
             </div>
             <div class="box sixth last">
-              <h3><a href="contact.html">联系我们</a></h3>
+              <h3>
+                <a href="contact.html">联系我们</a>
+              </h3>
             </div>
             <!-- <div id="footer_sns">
               <ul>
@@ -287,7 +393,9 @@ APPLICATIOS</a></h3>
       </div>
     </footer>
   </div>
-  <p id="pagetop"><a href="#"></a></p>
+  <p id="pagetop">
+    <a href="#"></a>
+  </p>
 </body>
 
 </html>
