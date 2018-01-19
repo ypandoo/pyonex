@@ -142,7 +142,7 @@
 					//提交数据的类型 POST GET
 					type: "POST",
 					//提交的网址
-					url: "http://127.0.0.1:3000/sendmail",
+					url: "http://www.pyonex.cc/sendmail",
 					headers:{
 						'Access-Control-Allow-Origin': '*',
 						'Access-Control-Allow-Headers': 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With',
