@@ -14,8 +14,8 @@ internals.extend = function (o, n) {
 var mailConfig = {
   service: '126',
   auth: {
-    user: 'vnewcd@126.com',
-    pass: 'Lei000Lei'
+    user: 'ypandoo1@126.com',
+    pass: 'ypand00#'
   }
 };
 

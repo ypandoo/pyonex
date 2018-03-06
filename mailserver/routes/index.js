@@ -27,7 +27,7 @@ router.post('/sendmail', function(req, res) {
 	text_content = text_content + '城市：' + email + '\n';
 	text_content = text_content + '街道：' + street + '\n';
 	text_content = text_content + '邮编：' + code + '\n';
-	text_content = text_content + '----------问题内容--------\n';
+	text_content = text_content + '---------------问题内容------------\n';
 	text_content = text_content + question;
 
 
@@ -44,9 +44,9 @@ var config = {
 
 //收件箱配置
 var options = {
-	subject: "[Pyonex网站邮件]客户咨询:"+ question.substr(0, 20)+'...',
+	subject: "[Pyonex网站客户咨询]"+ question.substr(0, 20)+'...',
 	text: text_content,
-	to: "ypandoo@126.com",
+	to: "y.tan@seirin.jp",
 	// cc:"870***29@qq.com,51****78@qq.com",
 	sender: name,
 	// attachments:[
