@@ -1969,6 +1969,39 @@ q:after {
     line-height: 1.6em;
 }
 
+.title_box2 {
+    overflow: hidden;
+    position: relative;
+    background-color: #e7e6e6;
+}
+
+.content_post .title_box2 .img {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    margin: 0;
+}
+
+.content_post .title_box2 h1 {
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 0;
+    color: #a7b5b5;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.content_post .title_box2 .desc {
+    margin-left: 30px;
+    position: relative;
+    z-index: 10;
+    margin-right: 400px;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
 .details {
     position: relative;
     width: 1160px;

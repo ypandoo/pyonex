@@ -25,6 +25,9 @@
   <script src="https://cdn.bootcss.com/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script src="../js/scriptset.js"></script>
 
+  <script src="../js/vue.js"></script>
+  <script src="../js/vue-resource.min.js"></script>
+
   <script>
 
   </script>
@@ -75,10 +78,20 @@
         <div id="pankuzu" class="wrapper">
           <p><span class="home"><a href="index.html">主页</a></span> &gt; <span class="nowpage">临床应用</span></p>
         </div>
-        <div class="wrapper">
+        <div class="wrapper" id="vueapp">
           <div class="wide_one content_post">
-            <ul class="clinicalaplications anime1 fade_bottom">
-              <li>
+            <ul class="clinicalaplications">
+                 <li  v-for="category in list">
+                    <dl>
+                      <dt><a  v-bind:href="'category.html?type='+category._id"><img :src="category.url" alt=""></a></dt>
+                      <dd>
+                        <h3><a v-bind:href="'category.html?type='+category._id">{{category.title}}</a></h3>
+                        <p class="more"><a  v-bind:href="'category.html?type='+category._id">阅读更多</a></p>
+                      </dd>
+                    </dl>
+                  </li>
+
+              <!-- <li>
                 <dl>
                   <dt><a href="tension-headache.html"><img src="../img/ca01.jpg" alt=""></a></dt>
                   <dd>
@@ -131,7 +144,7 @@
                     <p class="more"><a href="menstrual-pain.html">阅读更多</a></p>
                   </dd>
                 </dl>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -219,6 +232,60 @@
   </div>
   <p id="pagetop"><a href="#"></a></p>
 
+
+  <script language="javascript">
+    "use strict";
+    (function () {
+        window.vm = new Vue({
+            el: "#vueapp",
+            data: {
+                loading: true,
+                list: [],
+                baseurl: 'http://localhost/pyonex/'
+            },
+
+            computed: {
+            },
+            watch: {
+            },
+            methods: {
+                jump: function (page, params) {
+                    if (!params) {
+                        var a = 1;
+                       window.location.href = page + '.html';
+                    } else {
+                        
+                    }
+                },
+
+                getParams: function () {
+                    var self = this;
+
+                    //banner
+                    Vue.http.post('http://www.pyonex.cc:5000/category/list', {show:true})
+                        .then(function (res) {
+                            console.log(res);
+                            if (res.body.error_code == 0) {
+                                //
+                                self.list = res.body.items
+
+                            } else {
+                                alert('获取数据失败.')
+                                //self.jump('error');
+                            }
+                        }, function (res) {
+                            console.log('query params failed!');
+                           //self.jump('error');
+                        });
+                },
+            },
+            mounted: function () {
+                    this.getParams();
+
+            }
+        });
+    })();
+</script>
 </body>
 
 </html>
