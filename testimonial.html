@@ -82,8 +82,8 @@
             <ul class="testimonial_list">
               
               <li v-for="item in list">
-                <p class="img"><a href="testimonial/testimonial1.html"><img :src="item.cover_url" alt=""></a></p>
-                <p class="name"><a href="testimonial/testimonial1.html">{{item.title}}</a></p>
+                <p class="img"><a v-bind:href="'testimonial_detail.html?id='+item._id"><img :src="item.cover_url" alt=""></a></p>
+                <p class="name"><a v-bind:href="'testimonial_detail.html?id='+item._id">{{item.title}}</a></p>
               </li>
              
             </ul>
@@ -91,6 +91,8 @@
         </div>
       </div>
     </main>
+
+    <div style="background-color:#009de0; height:50px; width:100%"></div>
 
     <script language="javascript">
         "use strict";
