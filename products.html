@@ -7,287 +7,106 @@
 <!--<![endif]-->
 
 <head>
-  <title>PYONEX（清铃揿针）</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
-  <link rel="icon" type="image/gif" href="favicon.gif" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="appleicon.png" />
-  <!--[if lt IE 9]>
+	<title>PYONEX（清铃揿针）</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+	<link rel="icon" type="image/gif" href="favicon.gif" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="apple-touch-icon" href="appleicon.png" />
+	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="js/scriptset.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="js/scriptset.js"></script>
 
-  <script>
+	
+	<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+	<script src="https://cdn.bootcss.com/vue-resource/1.5.0/vue-resource.min.js"></script>
 
-  </script>
+	<script>
+	</script>
 </head>
 
 <body>
-  <div id="cover">
-    <header>
-      <div id="header">
-        <div id="header_top">
-          <div class="wrapper">
-            <div id="seirin_logo"><a href="http://www.global.seirin.jp/english/"><img src="img/logo.png" alt="SEIRIN"></a></div>
-          </div>
-        </div>
-        <div id="header_main">
-          <div class="wrapper">
-            <div id="pyonex_logo"><a href="index.html"><img src="img/pyonex_logo.png" alt="PYONEX"></a></div>
-            <nav>
-              <div id="nav">
-                <ul>
+	<div id="cover">
+		<header>
+			<div id="header">
+				<div id="header_top">
+					<div class="wrapper">
+						<div id="seirin_logo"><a href="http://www.global.seirin.jp/english/"><img src="img/logo.png" alt="SEIRIN"></a></div>
+					</div>
+				</div>
+				<div id="header_main">
+					<div class="wrapper">
+						<div id="pyonex_logo"><a href="index.html"><img src="img/pyonex_logo.png" alt="PYONEX"></a></div>
+						<nav>
+							<div id="nav">
+								<ul>
 									<li><a href="products.html">产品</a></li>
 									<li><a href="design.html">设计</a></li>
-									<li><a href="clinical-application/index.html">临床应用</a></li>
+									<li><a href="clinical.html">临床应用</a></li>
 									<li><a href="testimonial.html">相关证明</a></li>
 									<li><a href="medicalresearch.html">医学研究</a></li>
 									<li><a href="contact.html">联系方式</a></li>
-                </ul>
-              </div>
-            </nav>
-            <!-- <div id="head_sns">
-              <ul>
-                <li><a href="https://www.facebook.com/SEIRIN-Corporation-317311218337527/" target="_blank"><img src="img/fb.png" alt=""></a></li>
-                <li><a href="https://www.instagram.com/seirin_global/" target="_blank"><img src="img/ins.png" alt=""></a></li>
-              </ul>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <article>
-        <section>
-          <div class="page_visual"> <img src="img/products_visual.jpg" alt=""> </div>
-        </section>
-        <div id="pankuzu" class="wrapper">
-          <p><span class="home"><a href="index.html">主页</a></span> &gt; <span class="nowpage">产品</span></p>
-        </div>
-        <section><span class="page_inlink"><span id="pro_lineup"></span></span>
-          <div id="product_table" class="wrapper anime1 fade_bottom">
-            <dt class="anime1 fade_left">
-              <h3 class="fontM">产品线</h3>
-              <div class="ex"></div>
-            </dt>
-            <table>
-              <tbody>
-                <tr>
-                  <th rowspan="2" scope="col" class="gray2">颜色</th>
-                  <th scope="col" class="orange">橘黄</th>
-                  <th scope="col" class="yellow">黄色</th>
-                  <th scope="col" class="green">绿色</th>
-                  <th scope="col" class="blue">蓝色</th>
-                  <th scope="col" class="pink">粉色</th>
-                </tr>
-                <tr>
-                  <td><img src="img/products/orange.png" alt=""></td>
-                  <td><img src="img/products/yellow.png" alt=""></td>
-                  <td><img src="img/products/green.png" alt=""></td>
-                  <td><img src="img/products/blue.png" alt=""></td>
-                  <td><img src="img/products/pink.png" alt=""></td>
-                </tr>
-                <tr>
-                  <th scope="row" class="gray1">针刺强度
-                  </th>
-                  <td>弱</td>
-                  <td>中-弱</td>
-                  <td>中</td>
-                  <td>高</td>
-                  <td>最高</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="gray1">针长 (mm)</th>
-                  <td><img src="img/products/orange_d.png" alt=""><br> 0.3mm
-                  </td>
-                  <td><img src="img/products/yellow_d.png" alt=""><br> 0.6mm
-                  </td>
-                  <td><img src="img/products/green_d.png" alt=""><br> 0.9mm
-                  </td>
-                  <td><img src="img/products/blue_d.png" alt=""><br> 1.2mm
-                  </td>
-                  <td><img src="img/products/pink_d.png" alt=""><br> 1.5mm
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="gray1">直径 (mm)</th>
-                  <td colspan="5">0.20mm</td>
-                </tr>
-              </tbody>
-            </table>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
 
-          </div>
-        </section>
-        <section>
-          <div id="product_how_to">
-            <div class="wrapper">
-              <ul>
-                <li>
-                  <dl>
-                    <dt class="anime1 fade_left"><span class="page_inlink"><span id="pro_howto"></span></span>
-                      <h3 class="fontM">使用方法</h3>
-                      <div class="ex">清铃揿针的使用是快速和容易的。只需同传统的针灸疗法一样将清铃揿针按压到相同的穴位即可。</div>
-                    </dt>
-                    <!-- <dd class="anime1 fade_right">
-                      <iframe width="450" height="253" src="https://www.youtube.com/embed/sEuQ6EeEZ6M?rel=0" frameborder="0" allowfullscreen></iframe>
-                    </dd> -->
-                  </dl>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div id="howtoapply_flow" class="wrapper anime1 fade_bottom">
-            <ol>
-              <li>
-                <dl>
-                  <dt><img src="img/products/howto_01.png" alt=""></dt>
-                  <dd>
-                    <div class="no"><img src="img/products/01.png" alt=""></div>
-                    <div class="ex">撕开.</div>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt><img src="img/products/howto_02.png" alt=""></dt>
-                  <dd>
-                    <div class="no"><img src="img/products/02.png" alt=""></div>
-                    <div class="ex">去除封塑.</div>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt><img src="img/products/howto_03.png" alt=""></dt>
-                  <dd>
-                    <div class="no"><img src="img/products/03.png" alt=""></div>
-                    <div class="ex">拉开背衬.</div>
-                  </dd>
-                </dl>
-              </li>
-              <li class="clear">
-                <dl>
-                  <dt><img src="img/products/howto_04.png" alt=""></dt>
-                  <dd>
-                    <div class="no"><img src="img/products/04.png" alt=""></div>
-                    <div class="ex">用拇指和食指抓住保护层和胶带, 将清铃揿针从塑盒中取出。</div>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt><img src="img/products/howto_05.png" alt=""></dt>
-                  <dd>
-                    <div class="no"><img src="img/products/05.png" alt=""></div>
-                    <div class="ex">将针头直接附着在皮肤上, 并按适当按压</div>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt><img src="img/products/howto_06.png" alt=""></dt>
-                  <dd>
-                    <div class="no"><img src="img/products/06.png" alt=""></div>
-                    <div class="ex">取下防护层和压带以确保粘合。</div>
-                  </dd>
-                </dl>
-              </li>
-            </ol>
-          </div>
-        </section>
-      </article>
-    </main>
-    <footer>
-      <div id="footer">
-        <div id="footer_main">
-          <div class="wrapper">
-            <div class="box first">
-              <h3><a href="products.html">产品</a></h3>
-              <ul>
-                <li><a href="products.html#pro_lineup">产品线</a></li>
-                <li><a href="products.html#pro_howto">使用方法</a></li>
-              </ul>
-            </div>
-            <div class="box second">
-              <h3><a href="design.html">设计</a></h3>
-            </div>
-            <div class="box third">
-              <h3><a href="clinical-application/index.html">临床应用</a></h3>
-              <ul>
-                <li><a href="clinical-application/tension-headache.html">紧张性头痛</a></li>
-                <li><a href="clinical-application/low-back-pain.html">腰痛</a></li>
-                <li><a href="clinical-application/knee-pain.html">膝盖疼痛</a></li>
-                <li><a href="clinical-application/eyestrain.html">视觉疲劳</a></li>
-                <li><a href="clinical-application/insomnia.html">失眠</a></li>
-                <li><a href="clinical-application/menstrual-pain.html">月经疼痛</a></li>
-              </ul>
-            </div>
-            <div class="box fourth">
-              <h3><a href="testimonial.html">相关证明</a></h3>
-              <div class="hidden">
-                <ul>
-                  <li><a href="testimonial/testimonial1.html">Below, Nils von</a></li>
-                  <li><a href="testimonial/testimonial2.html">Birch, Stephen</a></li>
-                  <li><a href="testimonial/testimonial3.html">Brown, Stephen</a></li>
-                  <li><a href="testimonial/testimonial4.html">Callison, Matt</a></li>
-                  <li><a href="testimonial/testimonial5.html">Gabriel Stux</a></li>
-                  <li><a href="testimonial/testimonial6.html">Giancarlo Bazzoni</a></li>
-                  <li><a href="testimonial/testimonial7.html">Gokavi, Cynthia</a></li>
-                  <li><a href="testimonial/testimonial8.html">Howard, John</a></li>
-                </ul>
-                <ul>
-                  <li><a href="testimonial/testimonial9.html">Shudo, Denmei</a></li>
-                  <li><a href="testimonial/testimonial10.html">Kuwahara, T. Koei</a></li>
-                  <li><a href="testimonial/testimonial11.html">Matsumoto, Kiiko</a></li>
-                  <li><a href="testimonial/testimonial12.html">Nakazawa, Hiroshi</a></li>
-                  <li><a href="testimonial/testimonial11.html">Tsurusaki, Takamasa</a></li>
-                  <li><a href="testimonial/testimonial14.html">Römer, Ansgar</a></li>
-                  <li><a href="testimonial/testimonial15.html">Wernicke, Thomas</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="box fifth">
-              <h3><a href="medicalresearch.html">临床应用
-</a></h3>
-              <ul>
-                <li><a href="medicalresearch.html#medicalr2016">2016</a></li>
-                <li><a href="medicalresearch.html#medicalr2015">2015</a></li>
-                <li><a href="medicalresearch.html#medicalr2014">2014</a></li>
-                <li><a href="medicalresearch.html#medicalr2012">2012</a></li>
-                <li><a href="medicalresearch.html#medicalr2009">2009</a></li>
-                <li><a href="medicalresearch.html#medicalr2008">2008</a></li>
-              </ul>
-            </div>
-            <div class="box sixth last">
-              <h3><a href="contact.html">联系我们</a></h3>
-            </div>
-            <div id="footer_sns">
-              <ul>
-                <li><a href="https://www.facebook.com/SEIRIN-Corporation-317311218337527/" target="_blank"><img src="img/fb.png" alt=""></a></li>
-                <li><a href="https://www.instagram.com/seirin_global/" target="_blank"><img src="img/ins.png" alt=""></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div id="footer_bottom">
-          <div class="wrapper">
-            <p id="copyright">© 2017 SEIRIN. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <p id="pagetop"><a href="#"></a></p>
+	</div>
+	
+	<div id="vueapp" >
+		<transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+			<div style="width:100%; margin:0; padding:0">
+					<img :src="imageContent" width="100%"/>
+					<div style="background-color:#009de0; height:50px"></div>
+			</div>
+		</transition>
+	</div>
 
+
+	<script type="text/javascript">
+
+		window.vm = new Vue({
+						el: "#vueapp",
+						data: {
+								loading: true,
+								imageContent: "123"
+						},
+
+						computed: {
+
+						},
+						watch: {
+
+						},
+						methods: {
+
+						},
+						mounted: function () {
+							var self = this
+							Vue.http.post( 'http://www.pyonex.cc:5000/article/findOne', {'id': '5ad9943285a2f648342a1d83'}, {})
+                            .then(function (res) {
+                                console.log(res);
+                                self.imageContent = res.body.item.cover_url
+                            }, function (res) {
+                                alert('无法获取数据!');
+                            });
+
+            },
+
+				});
+	</script>
 </body>
+
 </html>

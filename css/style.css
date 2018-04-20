@@ -354,7 +354,7 @@ body {
 ---------------------------------------*/
 
 #header {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -451,7 +451,7 @@ body {
 ---------------------------------------*/
 
 main {
-    padding-top: 122px;
+    /* padding-top: 122px; */
     font-family: 'Raleway', sans-serif;
 }
 
@@ -1995,9 +1995,9 @@ q:after {
 
 .content_post .title_box2 .desc {
     margin-left: 30px;
-    position: relative;
+    /* position: relative; */
     z-index: 10;
-    margin-right: 400px;
+    /* margin-right: 400px; */
     font-size: 1.1em;
     line-height: 1.6em;
 }
@@ -2896,7 +2896,7 @@ span.req {
         padding-top: 15px;
     }
     main {
-        padding-top: 155px;
+        /* padding-top: 155px; */
     }
     /*Nav */
     #menu {
@@ -2928,7 +2928,7 @@ span.req {
         width: 450px;
         height: 45px;
         background-color: #272727;
-        margin: 15px 0 10px 0;
+        margin: 15px 0 0px 0;
         left: 0;
         right: auto;
         top: 0;
@@ -3292,7 +3292,7 @@ span.req {
 
 @media only screen and (max-width: 490px) {
     main {
-        padding-top: 136px;
+        /* padding-top: 136px; */
     }
     #head_sns {
         top: 15px;
