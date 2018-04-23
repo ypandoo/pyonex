@@ -23,8 +23,9 @@
   <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="js/scriptset.js"></script>
-	<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+
+  <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
 	<script src="https://cdn.bootcss.com/vue-resource/1.5.0/vue-resource.min.js"></script>
   <script>
@@ -32,161 +33,181 @@
   </script>
 </head>
 
-
 <body>
   <div id="cover">
-    <header>
-      <div id="header">
-        <div id="header_top">
-          <div class="wrapper">
-            <div id="seirin_logo"><a href="http://www.global.seirin.jp/english/"><img src="img/logo.png" alt="SEIRIN"></a></div>
-          </div>
-        </div>
-        <div id="header_main">
-          <div class="wrapper">
-            <div id="pyonex_logo"><a href="index.html"><img src="img/pyonex_logo.png" alt="PYONEX"></a></div>
-            <nav>
-              <div id="nav">
-                <ul>
-                  <li><a href="products.html">产品</a></li>
-                  <li><a href="design.html">设计</a></li>
-                  <li><a href="clinical.html">临床应用</a></li>
-                  <li><a href="testimonial.html">相关证明</a></li>
-                  <li><a href="medicalresearch.html">医学研究</a></li>
-                  <li><a href="contact.html">联系我们</a></li>
-                </ul>
+      <header>
+          <div id="header">
+            <div id="header_top">
+              <div class="wrapper">
+                <div id="seirin_logo"><a href="http://www.global.seirin.jp/english/"><img src="img/logo.png" alt="SEIRIN"></a></div>
               </div>
-            </nav>
-            <!-- <div id="head_sns">
-              <ul>
-                <li><a href="https://www.facebook.com/SEIRIN-Corporation-317311218337527/" target="_blank"><img src="img/fb.png" alt=""></a></li>
-                <li><a href="https://www.instagram.com/seirin_global/" target="_blank"><img src="img/ins.png" alt=""></a></li>
-              </ul>
-            </div> -->
+            </div>
+            <div id="header_main">
+              <div class="wrapper">
+                <div id="pyonex_logo"><a href="index.html"><img src="img/pyonex_logo.png" alt="PYONEX"></a></div>
+                <nav>
+                  <div id="nav">
+                    <ul>
+                      <li><a href="products.html">产品</a></li>
+                      <li><a href="design.html">设计</a></li>
+                      <li><a href="clinical.html">临床应用</a></li>
+                      <li><a href="testimonial.html">相关证明</a></li>
+                      <li><a href="medicalresearch.html">医学研究</a></li>
+                      <li><a href="contact.html">联系方式</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </header>
+        </header>
+
+
     <main id="vueapp">
-      <section>
-        <div class="page_visual">
-          <h1 id="page_title">相关证明</h1>
-        </div>
-      </section>
-      <div id="pankuzu" class="wrapper">
-        <p><span class="home"><a href="index.html">主页</a></span> &gt; <span class="nowpage">相关证明</span></p>
-      </div>
-      <div class="wrapper">
-        <div class="wide_one content_post">
-          <div class="anime1 fade_bottom">
-            <ul class="testimonial_list">
-              
-              <li v-for="item in list">
-                <p class="img"><a v-bind:href="'testimonial_detail.html?id='+item._id"><img :src="item.cover_url" alt=""></a></p>
-                <p class="name"><a v-bind:href="'testimonial_detail.html?id='+item._id">{{item.title}}</a></p>
-              </li>
-             
-            </ul>
+
+      <article>
+          <section>
+              <div class="page_visual">
+                <h1 id="page_title" style="margin:0">相关证明</h1>
+              </div>
+            </section>
+        <div class="wrapper">
+          <div class="wide_one content_post">
+            <!-- <div class="title_box2" style="height:220px">
+                <h1>{{title}}</h1>
+                <p class="desc">{{desc}}</p>
+            </div> -->
+            <div class="row" style="margin-top:30px">
+                <div class="col-sm-6 col-md-4"  v-for="item in list">
+                  <div class="thumbnail">
+                    <img :src="item.cover_url" alt="..." style="height:150px; max-width:100%; border-radius:10px">
+                    <div class="caption">
+                      <h3>{{item.title}}</h3>
+                      <!-- <p>发布时间： {{item.updatedAt}}</p> -->
+                      <p style="     max-height: 100px;
+                      min-height: 100px;
+                      overflow: auto;">{{item.desc}}</p>
+                      <p><a :href="item.url" class="btn btn-primary" role="button" style="color:white">查看详情</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div v-if="showmore" style="    text-align: center;
+            border: 1px solid #9ec1ff;
+            padding: 10px;
+            background: #eeeeee;
+            color: #70a9ff;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 50px;" @click="more">加载更多...</div>
+
           </div>
         </div>
-      </div>
+      </article>
+
+      <div style="    background-color: rgb(0, 157, 224);color:white;font-size:14px;
+      position: fixed;
+      height: 40px;line-height:40px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align:center">© 2017 SEIRIN. All rights reserved.</div>
     </main>
 
-    <div style="background-color:#009de0; height:50px; width:100%"></div>
-
-    <script language="javascript">
-        "use strict";
-        (function () {
-            window.vm = new Vue({
-                el: "#vueapp",
-                data: {
-                    loading: true,
-                    list: [],
-                    title: '',
-                    desc: '',
-                    url: '',
-                    id: '',
-                    page : 1,
-                    limit: 10,
-                    total: 1,
-                    showmore: false
+  <script language="javascript">
+      "use strict";
+      (function () {
+          window.vm = new Vue({
+              el: "#vueapp",
+              data: {
+                  loading: true,
+                  list: [],
+                  title: '',
+                  desc: '',
+                  url: '',
+                  id: '',
+                  page : 1,
+                  limit: 10,
+                  total: 1,
+                  showmore: false
+              },
+  
+              computed: {
+              },
+              watch: {
+              },
+              methods: {
+                getURLParameter : function(name) {
+                  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
                 },
-    
-                computed: {
-                },
-                watch: {
-                },
-                methods: {
-                  getURLParameter : function(name) {
-                    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+                  jump: function (page, params) {
+                      if (!params) {
+                          var a = 1;
+                         window.location.href = page + '.html';
+                      } else {
+                          
+                      }
                   },
-                    jump: function (page, params) {
-                        if (!params) {
-                            var a = 1;
-                           window.location.href = page + '.html';
-                        } else {
-                            
-                        }
-                    },
+
+                  more: function(){
+                    this.page = this.page+1
+                    this.getParams();
+                  },
   
-                    more: function(){
-                      this.page = this.page+1
-                      this.getParams();
-                    },
-    
-                    getParams: function () {
-                        var self = this;
-    
-                        //banner
-                        Vue.http.post('http://www.pyonex.cc:5000/category/findOne', {id : self.id})
-                            .then(function (res) {
-                                console.log(res);
-                                if (res.body.error_code == 0) {
-                                    //
-                                    self.title = res.body.item.title
-                                    self.desc = res.body.item.desc
-                                    self.url = res.body.item.url
-                                    
-                                    var query ={
-                                      page: self.page,
-                                      limit: self.limit,
-                                      type: self.id
-                                    }
+                  getParams: function () {
+                      var self = this;
   
-                                    Vue.http.post('http://www.pyonex.cc:5000/article/list', query)
-                                            .then(function (res) {
-                                              if (res.body.error_code == 0) {
-                                                //
-                                                self.list = self.list.concat(res.body.items)
-                                                self.total = res.body.pages;
+                      //banner
+                      Vue.http.post('http://www.pyonex.cc:5000/category/findOne', {id : self.id})
+                          .then(function (res) {
+                              console.log(res);
+                              if (res.body.error_code == 0) {
+                                  //
+                                  self.title = res.body.item.title
+                                  self.desc = res.body.item.desc
+                                  self.url = res.body.item.url
+                                  
+                                  var query ={
+                                    page: self.page,
+                                    limit: self.limit,
+                                    type: self.id
+                                  }
+
+                                  Vue.http.post('http://www.pyonex.cc:5000/article/list', query)
+                                          .then(function (res) {
+                                            if (res.body.error_code == 0) {
+                                              //
+                                              self.list = self.list.concat(res.body.items)
+                                              self.total = res.body.pages;
+
+                                              if(self.page < self.total)
+                                                self.showmore = true
+                                              else
+                                                self.showmore = false
+                                            }
+
+
+                                          })
   
-                                                if(self.page < self.total)
-                                                  self.showmore = true
-                                                else
-                                                  self.showmore = false
-                                              }
-  
-  
-                                            })
-    
-                                } else {
-                                    alert('获取数据失败.')
-                                    //self.jump('error');
-                                }
-                            }, function (res) {
-                                console.log('query params failed!');
-                               //self.jump('error');
-                            });
-                    },
-                },
-                mounted: function () {
-                     this.id = '5ad9b7a785a2f648342a1d84';
-                     if(this.id)
-                      this.getParams();
-                }
-            });
-        })();
-    </script>
+                              } else {
+                                  alert('获取数据失败.')
+                                  //self.jump('error');
+                              }
+                          }, function (res) {
+                              console.log('query params failed!');
+                             //self.jump('error');
+                          });
+                  },
+              },
+              mounted: function () {
+                   this.id = '5ad9b7a785a2f648342a1d84';
+                   if(this.id)
+                    this.getParams();
+              }
+          });
+      })();
+  </script>
 </body>
 
 </html>

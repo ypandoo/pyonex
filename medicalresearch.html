@@ -18,14 +18,14 @@
   <link rel="apple-touch-icon" href="appleicon.png" />
   <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <![endif]-->
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" type="text/css" />
   <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
   <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
 	<script src="https://cdn.bootcss.com/vue-resource/1.5.0/vue-resource.min.js"></script>
   <script>
@@ -35,7 +35,7 @@
 
 <body>
   <div id="cover">
-      <header>
+      <div>
           <div id="header">
             <div id="header_top">
               <div class="wrapper">
@@ -60,47 +60,21 @@
               </div>
             </div>
           </div>
-        </header>
+        </div>
 
 
     <main id="vueapp">
       <article>
-        <!-- <section>
           <div class="page_visual">
-            <h1 id="page_title">临床应用</h1>
-          </div>
-        </section> -->
-        <!-- <div id="pankuzu" class="wrapper">
-          <p><span class="home"><a href="index.html">主页</a></span> &gt; <a href="index.html">临床应用</a> &gt;
-            <span class="nowpage">{{title}}</span></p>
-        </div> -->
+              <h1 id="page_title" style="margin:0">医学研究</h1>
+            </div>
+          </section>
         <div class="wrapper">
           <div class="wide_one content_post">
-            <div class="title_box2" style="height:220px">
-              <!-- <div>               -->
+            <!-- <div class="title_box2" style="height:220px">
                 <h1>{{title}}</h1>
                 <p class="desc">{{desc}}</p>
-              <!-- </div>
-              <div> <img :src="url" alt="" height="220px"> </div> -->
-            </div>
-
-            <!-- <div style="margin-top:50px">
-              <div v-for="item in list" style="border-bottom: 1px solid #eeeeee;border-bottom: 1px solid rgb(238, 238, 238);
-              padding: 20px;">
-                <p style="    font-size: 24px;
-                color: grey;
-                font-weight: bold;
-                margin-bottom: 5px;">{{item.title}}</p>
-                <p style="    font-size: 12px;
-                color: grey;">发布时间： {{item.updatedAt}}</p>
-                <p style="">作者： {{item.author}}</p>
-                <a target="_blank" :href="item.url" style="    padding: 5px 20px;
-                background: #009de0;
-                color: white;
-                border-radius: 5px;">下载文献</a>
-              </div>
             </div> -->
-
             <div class="row" style="margin-top:30px">
                 <div class="col-sm-6 col-md-4"  v-for="item in list">
                   <div class="thumbnail">
@@ -109,7 +83,7 @@
                       <h3>{{item.title}}</h3>
                       <p>发布时间： {{item.updatedAt}}</p>
                       <p>作者： {{item.author}}</p>
-                      <p><a  target="_blank" :href="item.url" class="btn btn-primary" role="button">下载文献</a></p>
+                      <p><a  target="_blank" :href="item.url" class="btn btn-primary" role="button" style="color:white">下载文献</a></p>
                     </div>
                   </div>
                 </div>
@@ -127,6 +101,14 @@
           </div>
         </div>
       </article>
+
+      <div style="    background-color: rgb(0, 157, 224);color:white;font-size:14px;
+      position: fixed;
+      height: 40px;line-height:40px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align:center">© 2017 SEIRIN. All rights reserved.</div>
     </main>
 
   <script language="javascript">

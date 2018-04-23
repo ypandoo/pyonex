@@ -25,54 +25,83 @@
 	<script src="https://cdn.bootcss.com/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	<script src="js/scriptset.js"></script>
 
+
 	
 	<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
 	<script src="https://cdn.bootcss.com/vue-resource/1.5.0/vue-resource.min.js"></script>
+
+	<script src="https://cdn.bootcss.com/element-ui/2.3.4/index.js"></script>
+	<link href="https://cdn.bootcss.com/element-ui/2.3.4/theme-chalk/index.css" rel="stylesheet">
 
 	<script>
 	</script>
 </head>
 
 <body>
-	<div id="cover">
-		<header>
-			<div id="header">
-				<div id="header_top">
-					<div class="wrapper">
-						<div id="seirin_logo"><a href="http://www.global.seirin.jp/english/"><img src="img/logo.png" alt="SEIRIN"></a></div>
-					</div>
-				</div>
-				<div id="header_main">
-					<div class="wrapper">
-						<div id="pyonex_logo"><a href="index.html"><img src="img/pyonex_logo.png" alt="PYONEX"></a></div>
-						<nav>
-							<div id="nav">
-								<ul>
-									<li><a href="products.html">产品</a></li>
-									<li><a href="design.html">设计</a></li>
-									<li><a href="clinical.html">临床应用</a></li>
-									<li><a href="testimonial.html">相关证明</a></li>
-									<li><a href="medicalresearch.html">医学研究</a></li>
-									<li><a href="contact.html">联系方式</a></li>
-								</ul>
+	<div id="vueapp">
+			<el-popover
+			ref="popover1"
+			placement="top-start"
+			title="欢迎关注我们"
+			width="200"
+			trigger="hover"
+			>
+			
+		</el-popover>
+			<div id="cover">
+					<header>
+						<div id="header">
+							<div id="header_top">
+								<div class="wrapper">
+									<div id="seirin_logo"><a href="http://www.global.seirin.jp/english/"><img src="img/logo.png" alt="SEIRIN"></a></div>
+								</div>
+			
 							</div>
-						</nav>
-					</div>
+							<div id="header_main">
+								<div class="wrapper">
+									<div id="pyonex_logo">
+										<a href="index.html"><img src="img/pyonex_logo.png" alt="PYONEX"></a>
+										<el-button v-popover:popover1 style="background: transparent;
+										color: white;
+										border: none;
+										float: right;"><i class="fa fa-weixin" aria-hidden="true" style="font-size:24px"></i></el-button>
+									</div>
+									<nav>
+										<div id="nav">
+											<ul>
+												<li><a href="products.html">产品</a></li>
+												<li><a href="design.html">设计</a></li>
+												<li><a href="clinical.html">临床应用</a></li>
+												<li><a href="testimonial.html">相关证明</a></li>
+												<li><a href="medicalresearch.html">医学研究</a></li>
+												<li><a href="contact.html">联系方式</a></li>
+											</ul>
+										</div>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</header>
+			
 				</div>
-			</div>
-		</header>
+				
+				<div>
+					<transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+						<div style="width:100%; margin:0; padding:0">
+								<img :src="imageContent" width="100%"/>
+								<div style="    background-color: rgb(0, 157, 224);color:white;font-size:14px;
+								position: fixed;
+								height: 40px;line-height:40px;
+								bottom: 0;
+								left: 0;
+								width: 100%;
+								text-align:center">© 2017 SEIRIN. All rights reserved.</div>
+						</div>
+					</transition>
+				</div>
+	</div>
 
-	</div>
-	
-	<div id="vueapp" >
-		<transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-			<div style="width:100%; margin:0; padding:0">
-					<img :src="imageContent" width="100%"/>
-					<div style="background-color:#009de0; height:50px"></div>
-			</div>
-		</transition>
-	</div>
 
 
 	<script type="text/javascript">
@@ -91,7 +120,7 @@
 
 						},
 						methods: {
-
+							
 						},
 						mounted: function () {
 							var self = this
